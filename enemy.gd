@@ -1,7 +1,5 @@
 extends CharacterBody2D
 
-#ousiastika exoume metablhth pou exei X,Y idiothta pou mporei na 
-#apothikeush dejia kai aristera speed kathws kai up and down speed
 var velocity = Vector2()
 @export var direction = -1
 @export var detects_cliffs = true
@@ -15,8 +13,6 @@ func _ready():
 	$floor_checker.enabled = detects_cliffs
 	
 
-#in order gia na doulepsi gravity kai velocity theloume aauthn edw th methodo0
-# oti kwdika valeis edw mesa leitourgei 60times/per sec
 func _physics_process(delta):
 	
 	if is_on_wall() or not $floor_checker.is_colliding() and detects_cliffs and is_on_floor():

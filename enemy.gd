@@ -25,7 +25,6 @@ func _physics_process(delta):
 	
 	velocity.x = speed * direction
 	
-	#tou actually move
 	velocity = move_and_slide (velocity,Vector2.UP)
 
 	
